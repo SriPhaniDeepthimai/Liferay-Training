@@ -1,0 +1,7 @@
+Bundle-Name: Students-web
+Bundle-SymbolicName: com.Students.Details
+Bundle-Version: 1.0.0
+Export-Package: com.Students.Details.constants
+Provide-Capability:\
+	liferay.language.resources;\
+		resource.bundle.base.name="content.Language"

@@ -1,0 +1,36 @@
+<%@ include file="init.jsp"%>
+
+<h2>Employee Lists</h2>
+
+<p>Hiiiii</p>
+
+<% 
+    Object deletedEmployee = request.getAttribute("students"); 
+%>
+
+<table class="table table-bordered">
+	<thead>
+		<tr>
+			<th>ID</th>
+			
+		
+		</tr>
+	</thead>
+	<tbody>
+		<c:forEach var="employee" items="${students}">
+			<tr>
+				<td>${employee.getDepartmentId()}</td>
+				
+			</tr>
+		</c:forEach>
+	</tbody>
+</table>
+
+<!-- Correct way to print it in JSP -->
+<p>Deleted Employee: <%= deletedEmployee %></p>
+
+<!-- Correct way to pass it to JavaScript -->
+<script>
+    var deletedEmployee = '<%= deletedEmployee %>';
+    console.log(deletedEmployee);
+</script>

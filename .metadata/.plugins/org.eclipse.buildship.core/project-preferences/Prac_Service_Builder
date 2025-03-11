@@ -1,0 +1,12 @@
+#
+#Mon Mar 10 18:54:10 IST 2025
+derivedResources=.gradle;build;Prac_Service_Builder-api/build;Prac_Service_Builder-service/build
+linkedResources=
+classpath=<?xml version\="1.0" encoding\="UTF-8"?>\n<classpath>\n</classpath>\n
+managedNatures=
+buildDir=build
+managedBuilders=<?xml version\="1.0" encoding\="UTF-8" standalone\="no"?><commands/>
+buildScriptPath=build.gradle
+subprojectPaths=Prac_Service_Builder-api;Prac_Service_Builder-service
+hasAutoBuildTasks=false
+gradleVersion=8.5

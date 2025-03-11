@@ -1,0 +1,139 @@
+info:
+    description: "Students REST API"
+    license:
+        name: "Apache 2.0"
+        url: "http://www.apache.org/licenses/LICENSE-2.0.html"
+    title: "StudentsRest"
+    version: v1.0
+openapi: 3.0.1
+
+components:
+  schemas:
+    DetailsObject:
+      properties:
+        studentId:
+          type: integer
+          format: int32
+        studentName:
+          type: string
+        departmentId:
+          type: integer
+          format: int32
+        
+
+paths:
+
+  "/create-student":
+    post:
+      operationId: createStudent
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/DetailsObject"
+          application/xml:
+            schema:
+              $ref: "#/components/schemas/DetailsObject"
+      responses:
+        200:
+          description: "Success Response"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/DetailsObject"
+            application/xml:
+              schema:
+                $ref: "#/components/schemas/DetailsObject"
+      tags: ["DetailsObject"]
+  "/get-students/{departmentId}":
+    get:
+      operationId: getStudentByDepartmentId
+      parameters:
+        - in: path
+          name: departmentId
+          required: true
+          schema:
+            type: integer
+            format: int32
+      responses:
+        200:
+          description: "Success Response"
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                 $ref: "#/components/schemas/DetailsObject"
+            application/xml:
+              schema:
+                $ref: "#/components/schemas/DetailsObject"
+      tags: ["DetailsObject"]
+  "/get-students":
+    get:
+      operationId: getStudents
+      parameters:
+        - in: query
+          name: page
+          schema:
+            type: integer
+        - in: query
+          name: pageSize
+          schema:
+            type: integer
+      responses:
+        200:
+          description: "Success Response"
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: "#/components/schemas/DetailsObject"
+            application/xml:
+              schema:
+                items:
+                  $ref: "#/components/schemas/DetailsObject"
+      tags: ["DetailsObject"]
+  "/update-student":
+    post:
+      operationId: updateStudent
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/DetailsObject"
+          application/xml:
+            schema:
+              $ref: "#/components/schemas/DetailsObject"
+      responses:
+        200:
+          description: "Success Response"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/DetailsObject"
+            application/xml:
+              schema:
+                $ref: "#/components/schemas/DetailsObject"
+      tags: ["DetailsObject"]
+  "/delete-student/{studentId}":
+    delete:
+      operationId: deleteStudentByStudentId
+      parameters:
+        - in: path
+          name: studentId
+          required: true
+          schema:
+            type: integer
+            format: int32
+      responses:
+        200:
+          description: "Success Response"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/DetailsObject"
+            application/xml:
+              schema:
+                $ref: "#/components/schemas/DetailsObject"
+      tags: ["DetailsObject"]

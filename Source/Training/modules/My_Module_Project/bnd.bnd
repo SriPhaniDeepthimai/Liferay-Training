@@ -1,0 +1,7 @@
+Bundle-Name: My_Module_Project
+Bundle-SymbolicName: My_Module_Project
+Bundle-Version: 1.0.0
+Export-Package: My_Module_Project.constants
+Provide-Capability:\
+	liferay.language.resources;\
+		resource.bundle.base.name="content.Language"

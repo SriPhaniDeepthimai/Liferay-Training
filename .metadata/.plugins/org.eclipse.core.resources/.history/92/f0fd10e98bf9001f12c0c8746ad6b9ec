@@ -1,0 +1,48 @@
+package com.expando.user;
+
+import com.liferay.expando.kernel.service.ExpandoColumnLocalService;
+import com.liferay.expando.kernel.service.ExpandoTableLocalService;
+import com.liferay.expando.kernel.service.ExpandoValueLocalService;
+import com.liferay.portal.kernel.events.ActionException;
+import com.liferay.portal.kernel.events.LifecycleAction;
+import com.liferay.portal.kernel.events.LifecycleEvent;
+import com.liferay.portal.kernel.log.Log;
+import com.liferay.portal.kernel.log.LogFactoryUtil;
+import com.liferay.portal.kernel.service.UserLocalService;
+
+import org.osgi.service.component.annotations.Component;
+import org.osgi.service.component.annotations.Reference;
+import org.osgi.service.log.LogService;
+
+/**
+ * @author deepthimai.koppulu
+ */
+@Component(
+	property = {"key=application.startup.events"
+		// TODO enter required service properties
+	},
+	service = LifecycleAction.class
+)
+public class ExpandoUser implements LifecycleAction {
+
+	@Override
+	public void processLifecycleEvent(LifecycleEvent lifecycleEvent) throws ActionException {
+		_logger.info("<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<CAME INSIDE THE EVENT METHOD>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>");
+		
+	}
+	@Reference
+	private ExpandoTableLocalService _expandoTableLocalService;
+	@Reference
+	private ExpandoColumnLocalService _expandoColumnLocalService;
+	@Reference
+	private ExpandoValueLocalService _expandoValueLocalService;
+	@Reference
+	private LogService _log;
+	@Reference
+	private UserLocalService _userLocalService;
+	@Reference
+	private static Log _logger=LogFactoryUtil.getLog(ExpandoUser.class);
+
+	
+
+}

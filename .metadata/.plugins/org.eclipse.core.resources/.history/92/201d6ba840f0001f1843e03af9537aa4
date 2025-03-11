@@ -1,0 +1,9 @@
+<%@ include file="/init.jsp" %>
+
+<portlet:renderURL var="listEmployeesURL">
+    <portlet:param name="mvcRenderCommandName" value="/view_students"/>
+</portlet:renderURL>
+<!-- it will trigger rendeclass bydefault -->
+
+
+<script>window.location.href = "${listEmployeesURL}";</script>

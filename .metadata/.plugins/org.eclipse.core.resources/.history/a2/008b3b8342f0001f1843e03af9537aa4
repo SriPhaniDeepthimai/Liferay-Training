@@ -1,0 +1,59 @@
+<%@ include file="init.jsp"%>
+
+<h2>Students List</h2>
+
+<table class="table table-bordered">
+	<thead>
+		<tr>
+			<th>Student ID</th>
+			<th>Student Name</th>
+			<th>Department ID</th>
+		</tr>
+	</thead>
+	<tbody>
+		<c:forEach var="employee" items="${students}">
+			<tr>
+				<td>${employee.getDepartment_Id()}</td>
+				<td>${employee.getStudent_Id()}</td>
+				<td>${employee.getStudent_Name()}</td>
+				<td>
+                    <portlet:renderURL var="updateStudentURL">
+                        <portlet:param name="mvcRenderCommandName" value="/update_student"/>
+                        <portlet:param name="studentId" value="${student.studentId}"/>
+                    </portlet:renderURL>
+
+                    <portlet:actionURL var="deleteStudentURL" name="/delete_student">
+                        <portlet:param name="studentId" value="${student.studentId}"/>
+                    </portlet:actionURL>
+
+                    <a href="${updateStudentURL}" class="btn btn-primary btn-sm">Update</a>
+                    <a href="${deleteStudentURL}" class="btn btn-danger btn-sm" 
+                        onclick="return confirm('Are you sure you want to delete this student?');">Delete</a>
+                </td>
+				
+			</tr>
+		</c:forEach>
+	</tbody>
+</table>
+
+<button class="btn btn-success mt-3" onclick="addStudent()">Add Student</button>
+
+<!-- Correct way to print it in JSP -->
+<!-- JavaScript Functions -->
+<script>
+    function addStudent() {
+        window.location.href = 'addStudent.jsp';
+    }
+
+    function updateStudent(studentId) {
+        window.location.href = 'updateStudent.jsp?id=' + studentId;
+    }
+
+    function deleteStudent(studentId) {
+        if (confirm("Are you sure you want to delete this student?")) {
+            window.location.href = 'deleteStudent.jsp?id=' + studentId;
+        }
+    }
+</script>
+
+<!-- Correct way to pass it to JavaScript -->

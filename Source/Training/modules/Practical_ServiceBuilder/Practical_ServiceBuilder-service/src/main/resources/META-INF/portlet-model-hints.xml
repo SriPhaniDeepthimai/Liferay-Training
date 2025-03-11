@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+
+<model-hints>
+	<model name="Practical_ServiceBuilder.model.Entity1">
+		<field name="uuid" type="String" />
+		<field name="Student_Id" type="long" />
+		<field name="Student_Name" type="String" />
+		<field name="Maths_Marks" type="int" />
+	</model>
+	<model name="Practical_ServiceBuilder.model.Entity2">
+		<field name="uuid" type="String" />
+		<field name="StudentId" type="int" />
+		<field name="Student_Name" type="String" />
+	</model>
+	<model name="Practical_ServiceBuilder.model.Entity3">
+		<field name="uuid" type="String" />
+		<field name="Teacher_Id" type="int" />
+		<field name="Teacher_Name" type="String" />
+	</model>
+	<model name="Practical_ServiceBuilder.model.Entity4">
+		<field name="uuid" type="String" />
+		<field name="Department_Id" type="int" />
+		<field name="Department_Name" type="String" />
+	</model>
+</model-hints>

@@ -1,0 +1,35 @@
+<%@ include file="/init.jsp" %>
+
+<p>
+	<b><liferay-ui:message key="studentsweb.caption"/></b>
+</p>
+
+<h2>Student List</h2>
+
+<liferay-ui:search-container>
+    <liferay-ui:search-container-results results="${students}" />
+
+    <liferay-ui:search-container-row
+        className="com.Students.Details.model.Details"
+        modelVar="student">
+        
+        <liferay-ui:search-container-column-text 
+            name="Student Id" 
+            value="${student.Student_Id}" />
+        
+        
+        <!-- Student Name Column -->
+        <liferay-ui:search-container-column-text 
+            name="Student Name" 
+            value="${student.Student_Name}" />
+        
+        <!-- Student Email Column -->
+        <liferay-ui:search-container-column-text 
+            name="Department Id" 
+            value="${student.Department_Id}" />
+        
+    </liferay-ui:search-container-row>
+
+     <liferay-ui:search-iterator />
+     
+</liferay-ui:search-container>

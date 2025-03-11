@@ -1,0 +1,5 @@
+package com.Students.Details.portlet;
+
+public class StudentUpdatingMVCRenderCommand {
+
+}

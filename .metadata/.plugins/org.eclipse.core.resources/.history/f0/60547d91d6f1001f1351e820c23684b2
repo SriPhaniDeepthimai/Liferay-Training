@@ -1,0 +1,20 @@
+<%@ include file="/init.jsp" %>
+
+<portlet:renderURL var="listEmployeesURL">
+    <portlet:param name="mvcRenderCommandName" value="/view_students"/>
+</portlet:renderURL>
+
+<portlet:renderURL var="AddStudents">
+    <portlet:param name="mvcRenderCommandName" value="/add_student"/>
+</portlet:renderURL>
+<!-- it will trigger rendeclass bydefault -->
+
+<a href="${listEmployeesURL}">
+   <button>View Students</button>
+</a>
+
+<a href="${AddStudents}">
+   <button>Add Students</button>
+</a>
+
+

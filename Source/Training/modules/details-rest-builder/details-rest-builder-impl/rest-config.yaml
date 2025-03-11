@@ -1,0 +1,9 @@
+apiDir: "../details-rest-builder-api/src/main/java"
+apiPackagePath: "com.details.rest.builder"
+application:
+    baseURI: "/details-rest-builder"
+    className: "DetailsRestBuilderApplication"
+    name: "DetailsRestBuilder"
+author: "deepthimai.koppulu"
+clientDir: "../details-rest-builder-client/src/main/java"
+testDir: "../details-rest-builder-test/src/testIntegration/java"

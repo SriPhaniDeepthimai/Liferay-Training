@@ -1,0 +1,15 @@
+INDEX VERSION 1.134
+D:\New_LIFERAY_workspace\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\1361438220.index
+\Students-web\src\main\java
+D:\New_LIFERAY_workspace\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\1598706360.index
+\StudentDetails-Web\src\main\java
+D:\New_LIFERAY_workspace\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\4118224006.index
+\PhasesExample\src\main\java
+D:\New_LIFERAY_workspace\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\823896795.index
+\My_Module_Project\src\main\java
+D:\New_LIFERAY_workspace\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\875999971.index
+\Students-web\src\main\java
+D:\New_LIFERAY_workspace\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\2392352169.index
+\students-management\src\main\java
+D:\New_LIFERAY_workspace\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\2958415455.index
+\students-rest-management\src\main\java

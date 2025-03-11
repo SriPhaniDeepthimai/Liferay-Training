@@ -1,0 +1,4 @@
+Bundle-Name: Practical_Api
+Bundle-SymbolicName: Practical_Api
+Bundle-Version: 1.0.0
+Export-Package: Practical_Api.api

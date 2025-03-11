@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<custom-sql>
+    <sql id="Query1">
+        <![CDATA[
+            SELECT * FROM student_details WHERE Department_Id = ?
+        ]]>
+    </sql>
+</custom-sql> 

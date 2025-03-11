@@ -1,0 +1,50 @@
+package com.Students.Details.portlet;
+
+import com.Students.Details.model.Details;
+import com.Students.Details.service.persistence.DetailsFinder;
+import com.liferay.portal.kernel.portlet.bridges.mvc.MVCActionCommand;
+import com.liferay.portal.kernel.util.ParamUtil;
+import com.liferay.portal.kernel.util.PortalUtil;
+
+import java.io.IOException;
+import java.util.List;
+
+import javax.portlet.ActionRequest;
+import javax.portlet.ActionResponse;
+import javax.portlet.PortletException;
+
+import org.osgi.service.component.annotations.Component;
+import org.osgi.service.component.annotations.Reference;
+
+@Component(
+    immediate = true,
+    property = {
+        "javax.portlet.name=StudentPortlet",
+        "mvc.command.name=/search_students"
+    },
+    service = MVCActionCommand.class
+)
+public class SearchStudentsActionCommand implements MVCActionCommand {
+
+    @Reference
+    private DetailsFinder detailsFinder; // Custom SQL Finder
+
+    @Override
+    public boolean processAction(ActionRequest actionRequest, ActionResponse actionResponse) throws PortletException {
+        
+        int departmentId = ParamUtil.getInteger(actionRequest, "departmentId", -1);
+
+        if (departmentId != -1) {
+            List<Details> students = detailsFinder.findByDetails(departmentId);
+            actionRequest.setAttribute("students", students);
+        }
+
+        try {
+            actionResponse.sendRedirect(PortalUtil.getCurrentURL(actionRequest));
+        } catch (IOException e) {
+            throw new PortletException(e);
+        }
+
+        return false; // To continue normal processing
+    }
+}

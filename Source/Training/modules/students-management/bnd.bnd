@@ -1,0 +1,7 @@
+Bundle-Name: students-management
+Bundle-SymbolicName: com.students.web.management
+Bundle-Version: 1.0.0
+Export-Package: com.students.web.management.constants
+Provide-Capability:\
+	liferay.language.resources;\
+		resource.bundle.base.name="content.Language"

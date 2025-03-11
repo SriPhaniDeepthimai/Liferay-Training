@@ -1,0 +1,4 @@
+1740134089029	Rename type 'StudentUpdatingMVCRenderCommand'
+1740134106807	Rename type 'StudentsAddingMVCRencerCommand'
+1740139204031	Move 'addStudent.jsp' to 'resources'
+1740139207158	Move 'updateStudent.jsp' to 'resources'

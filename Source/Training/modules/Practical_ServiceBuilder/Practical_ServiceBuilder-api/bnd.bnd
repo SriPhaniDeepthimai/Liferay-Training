@@ -1,0 +1,10 @@
+Bundle-Name: Practical_ServiceBuilder-api
+Bundle-SymbolicName: Practical_ServiceBuilder.api
+Bundle-Version: 1.0.0
+Export-Package:\
+	Practical_ServiceBuilder.exception,\
+	Practical_ServiceBuilder.model,\
+	Practical_ServiceBuilder.service,\
+	Practical_ServiceBuilder.service.persistence
+-check: EXPORTS
+-includeresource: META-INF/service.xml=../Practical_ServiceBuilder-service/service.xml

@@ -1,0 +1,28 @@
+package com.expando.user;
+
+import com.liferay.portal.kernel.events.ActionException;
+import com.liferay.portal.kernel.events.LifecycleAction;
+import com.liferay.portal.kernel.events.LifecycleEvent;
+
+import org.osgi.service.component.annotations.Component;
+
+/**
+ * @author deepthimai.koppulu
+ */
+@Component(
+	property = {"key=application.startup.events"
+		// TODO enter required service properties
+	},
+	service = LifecycleAction.class
+)
+public class ExpandoUser implements LifecycleAction {
+
+	@Override
+	public void processLifecycleEvent(LifecycleEvent lifecycleEvent) throws ActionException {
+		// TODO Auto-generated method stub
+		
+	}
+
+	// TODO enter required service methods
+
+}

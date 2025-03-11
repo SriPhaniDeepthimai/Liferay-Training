@@ -1,0 +1,31 @@
+<%@ include file="/init.jsp" %>
+
+<portlet:renderURL var="listEmployeesURL">
+    <portlet:param name="mvcRenderCommandName" value="/view_students"/>
+</portlet:renderURL>
+<!-- it will trigger rendeclass bydefault -->
+<script>window.location.href = "${listEmployeesURL}";</script>
+
+<p>
+	<b><liferay-ui:message key="studentsweb.caption"/></b>
+</p>
+
+<h2>Student List</h2>
+
+<table border="1">
+    <thead>
+        <tr>
+            <th>Student Id</th>
+            <th>Student Name</th>
+            <th>Department Id</th>
+        </tr>
+    </thead>
+    <tbody>
+        <c:forEach var="student" items="${students}">
+            <tr>
+                <td>${student.Student_Name}</td>
+                <td>${student.Department_Id}</td>
+            </tr>
+        </c:forEach>
+    </tbody>
+</table>

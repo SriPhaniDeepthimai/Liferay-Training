@@ -1,0 +1,7 @@
+Bundle-Name: Practical_Service
+Bundle-SymbolicName: Practical_Service
+Bundle-Version: 1.0.0
+Bundle-Activator: com.BundleActivator.Practical_Activator
+Import-Package: \
+    Practical_Api.api;version="[1.0,2.0)", \
+    org.osgi.framework;version="[1.8,2.0)"

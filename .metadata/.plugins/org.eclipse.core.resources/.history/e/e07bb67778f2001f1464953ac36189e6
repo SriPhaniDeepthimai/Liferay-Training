@@ -1,0 +1,45 @@
+
+
+<!-- <h2>Add Student</h2>
+
+<form action="" method="post">
+    <div class="form-group">
+        <label for="studentId">Student ID:</label>
+        <input type="text" class="form-control" id="studentId" name="studentId" required>
+    </div>
+
+    <div class="form-group">
+        <label for="studentName">Student Name:</label>
+        <input type="text" class="form-control" id="studentName" name="studentName" required>
+    </div>
+
+    <div class="form-group">
+        <label for="departmentId">Department ID:</label>
+        <input type="text" class="form-control" id="departmentId" name="departmentId" required>
+    </div>
+
+    <button type="submit" class="btn btn-success">Add Student</button>
+    <a href="students.jsp" class="btn btn-secondary">Cancel</a>
+</form>
+ -->
+ 
+ 
+ <%@ include file="init.jsp" %>
+
+<portlet:actionURL name="/add_student" var="addStudentURL" />
+
+<h2>Add Student</h2>
+
+<aui:form action="${addStudentURL}" method="post">
+    <aui:fieldset>
+        <aui:input type="text" name="studentId" label="Student ID" required="true" />
+
+        <aui:input type="text" name="studentName" label="Student Name" required="true" />
+
+        <aui:input type="text" name="departmentId" label="Department ID" required="true" />
+        
+        <aui:button type="submit" value="Add Student" cssClass="btn btn-success" />
+        <aui:button type="button" value="Cancel" onClick="window.history.back();" cssClass="btn btn-secondary" />
+    </aui:fieldset>
+</aui:form>
+ 

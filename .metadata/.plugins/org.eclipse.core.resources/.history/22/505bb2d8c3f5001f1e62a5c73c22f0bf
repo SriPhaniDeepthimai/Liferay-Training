@@ -1,0 +1,85 @@
+<?xml version="1.0"?>
+<!DOCTYPE service-builder PUBLIC "-//Liferay//DTD Service Builder 7.4.0//EN" "http://www.liferay.com/dtd/liferay-service-builder_7_4_0.dtd">
+
+<service-builder dependency-injector="ds" package-path="com.students.core.management">
+	<namespace>Students_Details</namespace>
+	<!--<entity data-source="sampleDataSource" local-service="true" name="Foo" remote-service="false" session-factory="sampleSessionFactory" table="foo" tx-manager="sampleTransactionManager uuid="true"">-->
+	<entity local-service="true" name="Details" remote-service="false" uuid="true" table="Student_Details">
+		<column name="Student_Id" primary="true" type="int" />
+		<column name="groupId" type="long" />
+		<column name="companyId" type="long" />
+		<column name="userId" type="long" />
+		<column name="userName" type="String" />
+		<column name="createDate" type="Date" />
+		<column name="modifiedDate" type="Date" />
+		<column name="Student_Name" type="String" />
+		<column name="Department_Id" type="int" />
+		<!-- Finder methods -->
+		<finder name="DepartmentId" return-type="Collection">
+			<finder-column name="Department_Id" />
+		</finder>
+		<!-- References -->
+		<reference entity="AssetEntry" package-path="com.liferay.portlet.asset" />
+		<reference entity="AssetTag" package-path="com.liferay.portlet.asset" />
+	</entity>
+	
+	
+	
+	
+	
+	<entity local-service="true" name="Department_Details" remote-service="false" uuid="true" table="Department_Details">
+		<column name="Department_Id" primary="true" type="int" />
+		<column name="groupId" type="long" />
+		<column name="companyId" type="long" />
+		<column name="userId" type="long" />
+		<column name="userName" type="String" />
+		<column name="createDate" type="Date" />
+		<column name="modifiedDate" type="Date" />
+		<column name="Department_Name" type="String" />
+		<!-- Finder methods -->
+			<!-- <finder name="DepartmentId" return-type="Collection">
+			<finder-column name="Department_Id" />
+		</finder>-->
+		<!-- References -->
+		<reference entity="AssetEntry" package-path="com.liferay.portlet.asset" />
+		<reference entity="AssetTag" package-path="com.liferay.portlet.asset" />
+	</entity>
+	
+	
+	<entity local-service="true" name="TeacherDetails" remote-service="false" uuid="true" table="Teacher_Details">
+		<column name="Teacher_Id" primary="true" type="int" />
+		<column name="groupId" type="long" />
+		<column name="companyId" type="long" />
+		<column name="userId" type="long" />
+		<column name="userName" type="String" />
+		<column name="createDate" type="Date" />
+		<column name="modifiedDate" type="Date" />
+		<column name="Teacher_Name" type="String" />
+		<column name="Department_Id" type="int" />
+		<!-- Finder methods -->
+		<finder name="DepartmentId" return-type="Collection">
+			<finder-column name="Department_Id" />
+		</finder>
+		<!-- References -->
+		<reference entity="AssetEntry" package-path="com.liferay.portlet.asset" />
+		<reference entity="AssetTag" package-path="com.liferay.portlet.asset" />
+	</entity>
+	
+	<entity local-service="true" name="Students_Marks" remote-service="false" uuid="true" table="Students_Marks">
+		<column name="Student_Id" primary="true" type="int" />
+		<column name="groupId" type="long" />
+		<column name="companyId" type="long" />
+		<column name="userId" type="long" />
+		<column name="userName" type="String" />
+		<column name="createDate" type="Date" />
+		<column name="modifiedDate" type="Date" />
+		<column name="Student_Marks" type="String" />
+		<!-- Finder methods -->
+		<finder name="StudentId" return-type="Details">
+			<finder-column name="Student_Id" />
+		</finder>
+		<!-- References -->
+		<reference entity="AssetEntry" package-path="com.liferay.portlet.asset" />
+		<reference entity="AssetTag" package-path="com.liferay.portlet.asset" />
+	</entity>
+</service-builder>

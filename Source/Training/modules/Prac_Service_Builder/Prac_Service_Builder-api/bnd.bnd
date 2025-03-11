@@ -1,0 +1,10 @@
+Bundle-Name: Prac_Service_Builder-api
+Bundle-SymbolicName: Prac_Service_Builder.api
+Bundle-Version: 1.0.0
+Export-Package:\
+	Prac_Service_Builder.exception,\
+	Prac_Service_Builder.model,\
+	Prac_Service_Builder.service,\
+	Prac_Service_Builder.service.persistence
+-check: EXPORTS
+-includeresource: META-INF/service.xml=../Prac_Service_Builder-service/service.xml

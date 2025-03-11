@@ -1,0 +1,15 @@
+<%@ include file="init.jsp"%>
+<h2>Employee Lists</h2>
+
+<P>hiiiii</p>
+
+<%
+    Object deletedEmployee = request.getAttribute("students");
+%>
+<script>
+console.log(deletedEmployee)
+</script>
+
+
+
+

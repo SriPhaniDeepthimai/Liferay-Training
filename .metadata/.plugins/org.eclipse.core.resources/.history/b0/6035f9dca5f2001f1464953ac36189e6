@@ -1,0 +1,77 @@
+<%@ include file="init.jsp"%>
+
+<portlet:renderURL var="addStudentURL">
+    <portlet:param name="mvcRenderCommandName" value="/add_student"/>
+</portlet:renderURL>
+
+<portlet:actionURL name="/search_students" var="searchStudentURL">
+</portlet:actionURL>
+ 
+<div class="container mt-4">
+    <h2 class="text-center mb-4">Students List</h2>
+
+    <!-- Search Form -->
+    <aui:form action="${searchStudentURL}" method="post">
+        <div class="row mb-3">
+            <div class="col-md-6">
+                <aui:input type="text" name="departmentId" label="Search by Department ID" />
+            </div>
+            <div class="col-md-2">
+                <aui:button type="submit" value="Search" cssClass="btn btn-primary mt-4"/>
+            </div>
+        </div>
+    </aui:form>
+
+    <aui:form>
+        <table class="table table-striped table-hover">
+            <thead class="table-dark">
+                <tr>
+                    <th>Student ID</th>
+                    <th>Student Name</th>
+                    <th>Department ID</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                <c:forEach var="student" items="${students}">
+                    <tr>
+                        <td>${student.getStudent_Id()}</td>
+                        <td>${student.getStudent_Name()}</td>
+                        <td>${student.getDepartment_Id()}</td>
+                        <td>
+                            <portlet:renderURL var="updateStudentURL">
+                                <portlet:param name="mvcRenderCommandName" value="/update_student"/>
+                                <portlet:param name="studentId" value="${student.getStudent_Id()}"/>
+                            </portlet:renderURL>
+
+                            <portlet:actionURL name="/delete_student" var="deleteStudentURL">
+                                <portlet:param name="studentId" value="${student.getStudent_Id()}"/>
+                            </portlet:actionURL>
+
+                            <aui:a href="${updateStudentURL}" cssClass="btn btn-primary btn-sm">
+                                <i class="fas fa-edit"></i> Update
+                            </aui:a>
+
+                            <aui:a href="${deleteStudentURL}" cssClass="btn btn-danger btn-sm"
+                                onClick="return confirm('Are you sure you want to delete this student?');">
+                                <i class="fas fa-trash-alt"></i> Delete
+                            </aui:a>
+                        </td>
+                    </tr>
+                </c:forEach>
+            </tbody>
+        </table>
+
+        <div class="d-flex justify-content-between mt-4">
+            <aui:a href="${addStudentURL}" cssClass="btn btn-success">
+                <i class="fas fa-user-plus"></i> Add Student
+            </aui:a>
+
+            <aui:button type="button" value="Cancel" cssClass="btn btn-secondary"
+                onClick="window.history.back();"/>
+        </div>
+    </aui:form>
+</div>
+
+<!-- FontAwesome Icons (If not already included in Liferay theme) -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">

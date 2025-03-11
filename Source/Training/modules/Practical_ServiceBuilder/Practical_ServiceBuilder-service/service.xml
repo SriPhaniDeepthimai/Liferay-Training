@@ -1,0 +1,103 @@
+<?xml version="1.0"?>
+<!DOCTYPE service-builder PUBLIC "-//Liferay//DTD Service Builder 7.4.0//EN" "http://www.liferay.com/dtd/liferay-service-builder_7_4_0.dtd">
+
+<service-builder dependency-injector="ds" package-path="Practical_ServiceBuilder">
+	<namespace>Entity1</namespace>
+	<!--<entity data-source="sampleDataSource" local-service="true" name="Foo" remote-service="false" session-factory="sampleSessionFactory" table="foo" tx-manager="sampleTransactionManager uuid="true"">-->
+	<entity local-service="true" name="Entity1" remote-service="false" uuid="true">
+
+		<!-- PK fields -->
+    
+		<column name="Student_Id" primary="true" type="long" />
+		<!-- Other fields -->
+		
+		<column name="Student_Name" type="String" />
+		<column name="Maths_Marks" type="int" />
+		
+
+		<order by="asc">
+			<order-column name="Student_Name" />
+		</order>
+
+		<!-- Finder methods -->
+
+		<finder name="Marks" return-type="Collection">
+			<finder-column name="Student_Name" />
+		</finder>
+
+		<!-- References -->
+	</entity>
+	
+	<entity local-service="true" name="Entity2" remote-service="false" uuid="true">
+
+		<!-- PK fields -->
+
+		<column name="StudentId" primary="true" type="int" />
+
+		<!-- Other fields -->
+
+		<column name="Student_Name" type="String" />
+
+		<!-- Order -->
+
+		<order by="asc">
+			<order-column name="StudentId" />
+		</order>
+
+		<!-- Finder methods -->
+
+		<finder name="Students" return-type="Collection">
+			<finder-column name="StudentId" />
+		</finder>
+
+		<!-- References -->
+	</entity>
+	
+	<entity local-service="true" name="Entity3" remote-service="false" uuid="true">
+
+		<!-- PK fields -->
+
+		<column name="Teacher_Id" primary="true" type="int" />
+		<column name="Teacher_Name" type="String" />
+		
+
+		<!-- Order -->
+
+		<order by="asc">
+			<order-column name="Teacher_Id" />
+		</order>
+
+		<!-- Finder methods -->
+
+		<finder name="Teachers" return-type="Collection">
+			<finder-column name="Teacher_Id" />
+		</finder>
+
+		<!-- References -->
+	</entity>
+	
+	
+	<entity local-service="true" name="Entity4" remote-service="false" uuid="true">
+
+		<!-- PK fields -->
+
+		<column name="Department_Id" primary="true" type="int" />
+		<column name="Department_Name" type="String" />
+		
+
+		<!-- Order -->
+
+		<order by="asc">
+			<order-column name="Department_Id" />
+		</order>
+
+		<!-- Finder methods -->
+
+		<finder name="Departments" return-type="Collection">
+			<finder-column name="Department_Id" />
+		</finder>
+
+		<!-- References -->
+	</entity>
+	
+</service-builder>

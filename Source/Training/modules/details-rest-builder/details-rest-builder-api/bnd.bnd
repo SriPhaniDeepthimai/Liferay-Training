@@ -1,0 +1,6 @@
+Bundle-Name: details-rest-builder-api
+Bundle-SymbolicName: com.details.rest.builder.api
+Bundle-Version: 1.0.0
+Export-Package:\
+	com.details.rest.builder.dto.v1_0,\
+	com.details.rest.builder.resource.v1_0

@@ -1,0 +1,12 @@
+#
+#Mon Mar 10 18:54:10 IST 2025
+derivedResources=.gradle;build;details-rest-builder-api/build;details-rest-builder-client/build;details-rest-builder-impl/build;details-rest-builder-test/build
+linkedResources=
+classpath=<?xml version\="1.0" encoding\="UTF-8"?>\n<classpath>\n</classpath>\n
+managedNatures=
+buildDir=build
+managedBuilders=<?xml version\="1.0" encoding\="UTF-8" standalone\="no"?><commands/>
+buildScriptPath=build.gradle
+subprojectPaths=details-rest-builder-api;details-rest-builder-client;details-rest-builder-impl;details-rest-builder-test
+hasAutoBuildTasks=false
+gradleVersion=8.5

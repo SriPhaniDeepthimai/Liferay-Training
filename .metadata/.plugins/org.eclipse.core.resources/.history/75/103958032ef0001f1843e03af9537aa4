@@ -1,0 +1,18 @@
+<%@ include file="init.jsp"%>
+
+<h2>Employee Lists</h2>
+
+<p>Hiiiii</p>
+
+<% 
+    Object deletedEmployee = request.getAttribute("students"); 
+%>
+
+<!-- Correct way to print it in JSP -->
+<p>Deleted Employee: <%= deletedEmployee %></p>
+
+<!-- Correct way to pass it to JavaScript -->
+<script>
+    var deletedEmployee = '<%= deletedEmployee %>';
+    console.log(deletedEmployee);
+</script>

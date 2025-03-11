@@ -1,0 +1,12 @@
+dependencies {
+	api project(":modules:Prac_Service_Builder:Prac_Service_Builder-api")
+
+	compileOnly group: "com.liferay.portal", name: "release.dxp.api"
+}
+
+buildService {
+	apiDir = "../Prac_Service_Builder-api/src/main/java"
+	testDir = "../Prac_Service_Builder-test/src/testIntegration/java"
+}
+
+group = "Prac_Service_Builder"

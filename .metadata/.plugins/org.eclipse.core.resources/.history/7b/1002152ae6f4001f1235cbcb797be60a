@@ -1,0 +1,11 @@
+package com.Students.Details.constants;
+
+/**
+ * @author deepthimai.koppulu
+ */
+public class StudentsWebPortletKeys {
+
+	public static final String STUDENTSWEB =
+		"com_Students_Details_StudentsWebPortlet";
+
+}

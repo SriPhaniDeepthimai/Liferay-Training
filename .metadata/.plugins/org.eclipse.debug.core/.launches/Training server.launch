@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<launchConfiguration type="com.liferay.ide.server.portal.launch">
+    <stringAttribute key="org.eclipse.jdt.launching.PROGRAM_ARGUMENTS" value="start"/>
+    <stringAttribute key="server-id" value="Training server"/>
+</launchConfiguration>
