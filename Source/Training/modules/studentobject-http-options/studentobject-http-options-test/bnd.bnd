@@ -1,0 +1,5 @@
+Bundle-Name: studentobject-http-options-test
+Bundle-SymbolicName: com.studentobject.http.options.test
+Bundle-Version: 1.0.0
+-includeresource: com.studentobject.http.options.client.jar=../studentobject-http-options-client/build/libs/com.studentobject.http.options.client-1.0.0.jar;lib:=true
+-provider-policy: ${replacestring;${range;[==,==]};.*,(.*)];$1}

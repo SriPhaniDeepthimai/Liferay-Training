@@ -1,0 +1,9 @@
+apiDir: "../studentobject-http-options-api/src/main/java"
+apiPackagePath: "com.studentobject.http.options"
+application:
+    baseURI: "/studentobject-http-options"
+    className: "StudentobjectHttpOptionsApplication"
+    name: "StudentobjectHttpOptions"
+author: "deepthimai.koppulu"
+clientDir: "../studentobject-http-options-client/src/main/java"
+testDir: "../studentobject-http-options-test/src/testIntegration/java"

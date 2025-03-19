@@ -1,0 +1,6 @@
+Bundle-Name: studentobject-http-options-api
+Bundle-SymbolicName: com.studentobject.http.options.api
+Bundle-Version: 1.0.0
+Export-Package:\
+	com.studentobject.http.options.dto.v1_0,\
+	com.studentobject.http.options.resource.v1_0

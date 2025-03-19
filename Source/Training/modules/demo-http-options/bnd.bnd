@@ -1,0 +1,4 @@
+Bundle-Name: demo-http-options
+Bundle-SymbolicName: demo.http.options
+Bundle-Version: 1.0.0
+Liferay-Configuration-Path: /configuration
