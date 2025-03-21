@@ -1,5 +1,5 @@
 #
-#Wed Mar 19 10:45:36 IST 2025
+#Wed Mar 19 18:53:11 IST 2025
 derivedResources=.gradle;build;My_Module_Project/build;PhasesExample/build;Prac_Service_Builder/build;Practical_Api/build;Practical_Service/build;Practical_ServiceBuilder/build;Students/build;demo-http-options/build;details-rest-builder/build;expando-user/build;studentobject-http-options/build;students-management/build;Prac_Service_Builder/Prac_Service_Builder-api/build;Prac_Service_Builder/Prac_Service_Builder-service/build;Practical_ServiceBuilder/Practical_ServiceBuilder-api/build;Practical_ServiceBuilder/Practical_ServiceBuilder-service/build;Students/Students-api/build;Students/Students-service/build;details-rest-builder/details-rest-builder-api/build;details-rest-builder/details-rest-builder-client/build;details-rest-builder/details-rest-builder-impl/build;details-rest-builder/details-rest-builder-test/build;studentobject-http-options/studentobject-http-options-api/build;studentobject-http-options/studentobject-http-options-client/build;studentobject-http-options/studentobject-http-options-impl/build;studentobject-http-options/studentobject-http-options-test/build
 linkedResources=
 classpath=<?xml version\="1.0" encoding\="UTF-8"?>\n<classpath>\n</classpath>\n

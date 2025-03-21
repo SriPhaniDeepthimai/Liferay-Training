@@ -1,0 +1,13 @@
+assemble:
+    - from: vite-build
+      into: static
+training-extension:
+    friendlyURLMapping: training-extension
+    htmlElementName: training-extension
+    instanceable: true
+    name: training-extension
+    portletCategoryName: category.client-extensions
+    type: customElement
+    urls:
+        - assets/*.js
+    useESM: true

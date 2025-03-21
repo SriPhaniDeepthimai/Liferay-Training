@@ -1,5 +1,5 @@
 #
-#Wed Mar 19 10:45:36 IST 2025
+#Wed Mar 19 18:53:10 IST 2025
 derivedResources=.gradle;build
 linkedResources=
 classpath=<?xml version\="1.0" encoding\="UTF-8"?>\n<classpath>\n<classpathentry kind\="src" path\="/Prac_Service_Builder-api">\r\n\t<attributes>\r\n\t\t<attribute name\="without_test_code" value\="true"/>\r\n\t</attributes>\r\n</classpathentry>\r\n<classpathentry kind\="lib" path\="C\:/Users/deepthimai.koppulu/.gradle/caches/modules-2/files-2.1/com.liferay.portal/release.dxp.api/2024.q4.7/bed913e10b0a7a9bc48b76877cd32dbea55739bd/release.dxp.api-2024.q4.7.jar" sourcepath\="C\:/Users/deepthimai.koppulu/.gradle/caches/modules-2/files-2.1/com.liferay.portal/release.dxp.api/2024.q4.7/536512b5a5fc283ce365c582fb251a8de097e147/release.dxp.api-2024.q4.7-sources.jar">\r\n\t<attributes>\r\n\t\t<attribute name\="gradle_used_by_scope" value\=""/>\r\n\t</attributes>\r\n</classpathentry>\r\n</classpath>\n
